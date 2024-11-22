@@ -1,0 +1,39 @@
+<div>
+    <label for="">Search for Student :</label>
+    <input type="text" (keyup)="search()" [(ngModel)]="term">
+</div>
+
+<div class="container">
+    <div class="parent" *ngFor="let student of students">
+        <div class="top">
+            <div>
+                <img class="logo" src="{{student.school_logo}}" alt="" width="130px">
+            </div>
+            <div>
+                <h3>{{student.school_name}}</h3><br>
+                <h6>{{student.school_city}},{{student.school_pin}}</h6>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <b>Name :</b>
+                <p>{{student.name}}</p>
+                <b>Phone :</b>
+                <p>{{student.phone}}</p>
+                <b>City :</b>
+                <p>{{student.city}}</p>
+                <b>DOB :</b>
+                <p>{{student.dob}}</p>
+                <b>Email ID :</b>
+                <p>{{student.email}}</p>
+            </div>
+            <div class="right">
+                <img src="{{student.profile_picture}}" alt="" width="150px">
+                <h5>PRINCIPAL</h5>
+            </div>
+        </div>
+        <div class="bottom">
+            <button class="btn btn-warning" (click)="delete(student.id)">Delete</button>
+        </div>
+    </div>
+</div>

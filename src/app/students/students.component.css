@@ -1,0 +1,49 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.parent{
+    margin: 20px;
+    height: 50  0px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+}
+.top{
+    display: flex;
+    background-color: red;
+    border-radius: 30px;
+    
+}
+.middle{
+    display: flex;
+}
+p{
+    position: relative;
+    bottom: 25px;
+    left: 80px;
+}
+.right{
+    position: relative;
+    left: 200px;
+    top: 50px;
+}
+h5{
+    position: relative;
+    top: 100px;
+}
+.bottom{
+    background-color: red;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    border-radius: 30px;
+    position: relative;
+}

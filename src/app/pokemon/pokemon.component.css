@@ -1,0 +1,16 @@
+.parent{
+    background-color: rgb(233, 233, 219);
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    text-align: center;
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+<h1>Vehicle Details</h1>
+<label for="">Search For vehicles : </label>
+<input type="text" placeholder="Search" [(ngModel)]="term" (keyup)="filter()"><br><br>
+<label for="">Sort : </label>
+<select [(ngModel)]="column">
+    <option >select</option>
+    <option >Vehicle</option>
+    <option >manufacturer</option>
+    <option >model</option>
+    <option >type</option>
+    <option >fuel</option>
+    <option >color</option>
+    <option >image</option>
+    <option >cost</option>
+    <option >ID</option>
+</select>
+<select [(ngModel)]="order">
+    <option >select</option>
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">Submit</button><br>
+<label for="">Pagination : </label>
+<select [(ngModel)]="page">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+<select   [(ngModel)]="limit">
+    <option value="">10</option>
+    <option value="">20</option>
+    <option value="">20</option>
+</select>
+<button (click)="pagination()">Pagination</button>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Vehicle</th>
+                <th>manufacturer</th>
+                <th>model</th>
+                <th>type</th>
+                <th>fuel</th>
+                <th>color</th>
+                <th>image</th>
+                <th>cost</th>
+                <th>ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vehicle of vehicles">
+                <td>{{vehicle.Vehicle}}</td>
+                <td>{{vehicle.manufacturer}}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.type}}</td>
+                <td>{{vehicle.fuel}}</td>
+                <td>{{vehicle.color}}</td>
+                <td><img src="{{vehicle.image}}" alt="" width="100px"></td>
+                <td>{{vehicle.cost}}</td>
+                <td>{{vehicle.id}}</td>
+                <td><button class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

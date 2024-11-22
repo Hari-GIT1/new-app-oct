@@ -1,0 +1,23 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.right{
+height: 100%;
+width: 80%;
+background-color: gainsboro;
+overflow: auto;
+}
+.left{
+    height: 100%;
+    width: 20%;
+    overflow: auto;
+    background-color: bisque;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 30px;
+}

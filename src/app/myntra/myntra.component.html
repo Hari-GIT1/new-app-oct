@@ -1,0 +1,10 @@
+<h1>FlipKart Products</h1><br>
+<div class="parent">
+    <div class="child" *ngFor="let product of products">
+        <img src="{{product.image}}" alt=""><br>
+        <button>{{product.rating.rate}}</button>
+        <h3>{{product.category}}</h3>
+        <a href="">{{product.title}}</a>
+        <p>Rs.{{product.price}}</p>
+    </div>
+</div>

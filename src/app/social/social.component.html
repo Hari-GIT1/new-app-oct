@@ -1,0 +1,18 @@
+<h1>Social Profiles</h1>
+<div class="container-fluid" *ngFor="let profile of profiles">
+    <div class="row">
+        <img src={{profile.profilePic}} alt="">
+        <h3>{{profile.fullName}}</h3>
+        <label for="">{{profile.username}}</label>
+        <p>{{profile.bio}}</p>
+        <p><b>Location : </b>{{profile.location}}</p>
+        <p><b>Work : </b>{{profile.work}}</p>
+        <p><b>Hobbies : </b>{{profile.hobbies}}</p>
+        <p><b>Interests : </b>{{profile.interests}}</p>
+        <a class="follow">{{profile.followersCount}}</a><br>
+        <a class="follow">{{profile.followingCount}}</a><br>
+        <a class="follow">{{profile.postsCount}}</a><br>
+        </div>
+    </div>
+
+    

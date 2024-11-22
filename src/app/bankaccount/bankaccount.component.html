@@ -1,0 +1,27 @@
+<h1>Bank Accounts</h1>
+<label for="">Search For an Account :</label>
+<input type="text" (keyup)="search()" [(ngModel)]="term">
+<table border="1">
+    <thead>
+        <tr>
+            <th>Account Name</th>
+            <th>Balance</th>
+            <th>Account Number</th>
+            <th>City</th>
+            <th>Profile Picture</th>
+            <th>ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bankaccount of bankaccounts">
+            <td>{{bankaccount.account_name}}</td>
+            <td>{{bankaccount.available_balance}}</td>
+            <td>{{bankaccount.account_number}}</td>
+            <td>{{bankaccount.city}}</td>
+            <td><img src="{{bankaccount.profie_picture}}" alt="" width="80px"></td>
+            <td>{{bankaccount.id}}</td>
+            <td><button  (click)="delete(bankaccount.id)">delete</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Create Vehicle Form</h1>
+    <form action="" [formGroup]="vehicleForm"  class="row g-3">
+        <div class="col-md-6">
+        <label for="" class="form-label">Vehicle :-</label>
+        <input type="text" formControlName="Vehicle"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Manufacturer :- </label>
+        <input type="text" formControlName="manufacturer"  class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Model :-</label>
+        <input type="text" formControlName="model"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Type :-</label>
+        <input type="text" formControlName="type"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Fuel :-</label>
+        <input type="text" formControlName="fuel"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Color :-</label>
+        <input type="text" formControlName="color"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Image :-</label>
+        <input type="text" formControlName="image"class="form-control">
+        <br><br>
+
+        <label for=""class="form-label">Cost :-</label>
+        <input type="text" formControlName="cost"class="form-control">
+        <br><br>
+        </div>
+
+    </form><br>
+    <button (click)="submit()" class="btn btn-warning">Submit</button>
+</div>

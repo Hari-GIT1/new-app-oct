@@ -1,0 +1,51 @@
+.dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    padding: 5px;
+    background-color: aqua;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.red1{
+    color: red;
+}
+.green1{
+    color: green;
+}
+.yellow1{
+    color: yellow;
+}
+.blue1{
+    color: blue;
+}
+p{
+    text-decoration: solid black;
+    font-size: xx-large;
+    background-color: black;
+    height: 45px;
+    width: 90px;
+}
+.parent{
+margin-top: 150px;
+margin-left: 400px;
+height: 500px;
+width: 500px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color:aqua;
+border: 10px solid black;
+border-radius: 5px;
+}
