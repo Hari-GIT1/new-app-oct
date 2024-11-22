@@ -1,10 +1,11 @@
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.details{
+
+.details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,21 +19,25 @@
     background-color: white;
     border-radius: 20px;
 }
-.img{
+
+.img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-img{
+
+img {
 
     border-radius: 100%;
 }
-.follow{
+
+.follow {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
-.follower{
+
+.follower {
     text-decoration: none;
     color: black;
     height: 25px;
@@ -41,13 +46,15 @@ img{
     border-radius: 5px;
     text-align: center;
 }
-.visit{
+
+.visit {
     text-decoration: none;
     display: flex;
     justify-content: center;
     color: rgb(16, 241, 16);
 }
-h1{
+
+h1 {
     background-color: green;
     text-align: center;
     width: 100%;
