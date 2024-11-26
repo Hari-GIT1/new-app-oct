@@ -18,6 +18,8 @@ overflow: auto;
 a{
     text-decoration: none;
     color: black;
-    font-weight: 900;
     font-size: 30px;
 }
+.example-spacer {
+    flex: 1 1 auto;
+  }

@@ -22,6 +22,12 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateBankComponent } from './create-bank/create-bank.component';
 import { StudentsComponent } from './students/students.component';
 import { CreateStudentsIDComponent } from './create-students-id/create-students-id.component';
+import { TODOComponent } from './to-do/to-do.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { CresteUserComponent } from './creste-user/creste-user.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,9 @@ import { CreateStudentsIDComponent } from './create-students-id/create-students-
     CreateVehicleComponent,
     CreateBankComponent,
     StudentsComponent,
-    CreateStudentsIDComponent
+    CreateStudentsIDComponent,
+    TODOComponent,
+    CresteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +57,12 @@ import { CreateStudentsIDComponent } from './create-students-id/create-students-
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

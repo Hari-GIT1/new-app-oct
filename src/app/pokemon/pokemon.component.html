@@ -1,4 +1,4 @@
-<!-- <div class="parent" *ngFor="let pokemon of pokemons">
+<div class="parent" *ngFor="let pokemon of pokemons">
     <div class="image">
         <img src="{{pokemon.image_url}}" alt="" width="200px">
     </div>
@@ -10,17 +10,13 @@
         <p><b>Evolutions : </b>{{pokemon.evolutions}}</p>
         <p><b>Location : </b>{{pokemon.location}}</p>
     </div>
-</div> -->
-
-<div id="pokemonCarousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators -->
+</div>
+<!-- <div id="pokemonCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#pokemonCarousel" *ngFor="let pokemon of pokemons; let i = index"
                 [attr.data-bs-slide-to]="i" [class.active]="i === 0" aria-current="i === 0 ? 'true' : null" >
         </button>
     </div>
-
-    <!-- Carousel Inner -->
     <div class="carousel-inner">
         <div class="carousel-item" *ngFor="let pokemon of pokemons; let i = index" [class.active]="i === 0">
             <div class="d-flex justify-content-center">
@@ -41,7 +37,6 @@
         </div>
     </div>
 
-    <!-- Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -50,5 +45,5 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
-</div>
+</div> -->
 

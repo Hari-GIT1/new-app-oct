@@ -1,0 +1,78 @@
+<div class="flex-centre">
+    <form action="" [formGroup]="userForm">
+        <h1>Create a user</h1>
+        <label for="">Name :</label>
+        <input type="text" formControlName="name">
+        <br>
+
+        <label for="">Age :</label>
+        <input type="text" formControlName="age">
+        <br>
+
+        <label for="">DOB :</label>
+        <input type="text" formControlName="dob">
+        <br>
+
+        <label for="">Email :</label>
+        <input type="text" formControlName="email">
+        <br>
+
+        <div formGroupName="address">
+            <label for="">City :</label>
+            <input type="text" formControlName="city">
+            <br>
+
+            <label for="">Pin :</label>
+            <input type="text" formControlName="pin">
+            <br>
+        </div>
+
+        <label for="">Day Scholar :</label>
+        <input type="radio" formControlName="type" name="type" value="dayscholar">
+        <br>
+
+        <label for="">Residential :</label>
+        <input type="radio" formControlName="type" name="type" value="residential">
+        <br>
+
+        <div *ngIf="userForm.get('type')?.value=='dayscholar'">
+            <label for="">Bus Fee :</label>
+            <input type="text" formControlName="busFee">
+            <br>
+        </div>
+
+        <div *ngIf="userForm.get('type')?.value=='residential'">
+            <label for="">Hostel Fee :</label>
+            <input type="text" formControlName="hostelFee">
+            <br>
+        </div>
+        <br>
+
+        <button class="btn btn-info" (click)="addCard()">Add Card</button><br><br>
+
+        <div formArrayName="cards">
+            <div *ngFor="let  card of cardsFormArray.controls;let i=index">
+                <div formGroupName="{{i}}">
+                    <label for="">Card number :</label>
+                    <input type="text" formControlName="number">
+                    <br>
+
+                    <label for="">Expiry Date :</label>
+                    <input type="month" formControlName="expiry">
+                    <br>
+
+                    <label for="">CVV :</label>
+                    <input type="text" formControlName="cvv">
+                    <br>
+
+                    <label for="">Name on Card:</label>
+                    <input type="text" formControlName="cardname">
+                    <br>
+                    <button (click)="del()">Delete</button>
+                </div>
+            </div>
+        </div><br>
+        <button class="btn btn-warning" (click)="onClick()">Sumbit</button>
+    </form>
+
+</div>
