@@ -5,7 +5,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { MyntraComponent } from './myntra/myntra.component';
-import { BankaccountComponent } from './bankaccount/bankaccount.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
@@ -16,6 +15,9 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateBankComponent } from './create-bank/create-bank.component';
 import { StudentsComponent } from './students/students.component';
 import { CreateStudentsIDComponent } from './create-students-id/create-students-id.component';
+import { TODOComponent } from './to-do/to-do.component';
+import { BankaccountComponent } from './bankaccount/bankaccount.component';
+import { CresteUserComponent } from './creste-user/creste-user.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -34,6 +36,8 @@ const routes: Routes = [
     {path:'createbank',component:CreateBankComponent},
     {path:'student',component:StudentsComponent},
     {path:"createstudent",component:CreateStudentsIDComponent},
+    {path:"todo",component:TODOComponent},
+    {path:"creste",component:CresteUserComponent},
     
   ]},
   {path:'',component:LoginComponent},

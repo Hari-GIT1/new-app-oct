@@ -1,0 +1,52 @@
+<!-- <div class="parent">
+
+    <div class="input">
+        <h1>TO-DO</h1>
+        <label for="">Task :</label>
+        <input id="todo" type="text" [(ngModel)]="tasks">
+        <br><br>
+    
+        <label for="">Time :</label>
+        <input type="datetime-local"><br><br>
+        <button>Submit</button>
+        <br><br>
+        
+        <button>Create</button><br> 
+        <button>Reset</button>
+    </div>
+    <div  class="list">
+        <h1>List of tasks</h1>
+    </div>
+    <div class="details">
+        <h1>Task Details</h1>
+    </div>
+    
+</div> -->
+
+<div class="container">
+    <div class="todo-section">
+      <h1>TO-DO</h1>
+      <label for="task">Task:</label>
+      <textarea id="task" [(ngModel)]="newTask.description" placeholder="Enter task"></textarea>
+      <label for="time">Time:</label>
+      <input type="datetime-local" id="time" [(ngModel)]="newTask.time">
+      <button (click)="addTask()">Create</button>
+      <button (click)="resetFields()">Reset</button>
+    </div>
+    <div class="tasks-list">
+      <h2>List of tasks</h2>
+      <div *ngFor="let task of tasks" class="task">
+        <span>{{ task.description }} - {{ task.time | date: 'short' }}</span>
+        <div>
+          <button (click)="viewTask(task)">View</button>
+          <button (click)="editTask(task)">Edit</button>
+        </div>
+      </div>
+    </div>
+    <div class="task-details" *ngIf="selectedTask">
+      <h2>Task Details</h2>
+      <p><strong>Description:</strong> {{ selectedTask.description }}</p>
+      <p><strong>Time:</strong> {{ selectedTask.time | date: 'short' }}</p>
+    </div>
+  </div>
+  
