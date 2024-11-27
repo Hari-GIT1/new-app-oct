@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +14,19 @@ export class LoginComponent {
     password:new FormControl()
   })
 
+  constructor(private _loginService:LoginService){}
   onClick(){
-    console.log(this.loginForm.value)
+    console.log(this.loginForm)
+    this._loginService.login(this.loginForm.value).subscribe(
+      (data:any)=>{
+        alert("Login Success")
+      },
+      (err:any)=>{
+        alert("Login Failed")
+      }
+    )
 
   }
+
 
 }
