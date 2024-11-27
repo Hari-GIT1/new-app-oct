@@ -18,6 +18,7 @@ import { CreateStudentsIDComponent } from './create-students-id/create-students-
 import { TODOComponent } from './to-do/to-do.component';
 import { BankaccountComponent } from './bankaccount/bankaccount.component';
 import { CresteUserComponent } from './creste-user/creste-user.component';
+import { ValidationTaskComponent } from './validation-task/validation-task.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -38,6 +39,7 @@ const routes: Routes = [
     {path:"createstudent",component:CreateStudentsIDComponent},
     {path:"todo",component:TODOComponent},
     {path:"creste",component:CresteUserComponent},
+    {path:'v-task',component:ValidationTaskComponent},
     
   ]},
   {path:'',component:LoginComponent},

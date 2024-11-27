@@ -28,6 +28,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CresteUserComponent } from './creste-user/creste-user.component';
+import { ValidationTaskComponent } from './validation-task/validation-task.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CresteUserComponent } from './creste-user/creste-user.component';
     StudentsComponent,
     CreateStudentsIDComponent,
     TODOComponent,
-    CresteUserComponent
+    CresteUserComponent,
+    ValidationTaskComponent
   ],
   imports: [
     BrowserModule,
