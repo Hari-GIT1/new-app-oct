@@ -19,10 +19,11 @@ import { TODOComponent } from './to-do/to-do.component';
 import { BankaccountComponent } from './bankaccount/bankaccount.component';
 import { CresteUserComponent } from './creste-user/creste-user.component';
 import { ValidationTaskComponent } from './validation-task/validation-task.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
     {path:'vehicle',component:VehicleComponent},
     {path:'product',component:MyntraComponent},
